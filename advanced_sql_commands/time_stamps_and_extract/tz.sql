@@ -51,4 +51,3 @@ FROM payment;
 SELECT TO_CHAR(payment_date, 'MM-dd-YYYY')
 FROM payment;
 
-
