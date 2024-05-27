@@ -17,12 +17,12 @@ WHERE last_login IS NULL;
 -- Or reset everything without
 -- a where condition
 UPDATE account
-SET last_login = CURRENT_TIMESTAMP
+SET last_login = CURRENT_TIMESTAMP;
 
 
 -- Set based on another column
 UPDATE account
-SET last_login = created_on
+SET last_login = created_on;
 
 
 -- Using another table's values
@@ -30,13 +30,13 @@ SET last_login = created_on
 UPDATE TableA
 SET original_col = TableB.new_col
 FROM tableB
-WHERE tableA.id = TableB
+WHERE tableA.id = TableB;
 
 
 -- Return affected rows
 UPDATE account
 SET last_login = created_on
-RETURNING account_id, last_login
+RETURNING account_id, last_login;
 
 
 -- Update join
